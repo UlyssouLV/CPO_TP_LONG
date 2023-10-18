@@ -11,7 +11,6 @@ public class Baton extends Arme{
         this.age = age;
         this.lvl = Lvl;
         this.name = Name;
-        this.setType("Baton");
     }  // Fin Constructeur
 
     //toString

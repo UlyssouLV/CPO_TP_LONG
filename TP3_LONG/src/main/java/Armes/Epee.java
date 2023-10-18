@@ -14,7 +14,6 @@ public class Epee extends Arme{
         this.finesse = finesse;
         this.lvl = Lvl;
         this.name=Name;
-        this.setType("Epee");
     } // fin Constructeur
 
     @Override

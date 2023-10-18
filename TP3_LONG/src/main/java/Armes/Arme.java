@@ -4,7 +4,7 @@ package Armes;
 public class Arme {
    
     private int level;
-    private String nom,type;
+    private String nom;
     
     // Constructeur
     public Arme(int lvl, String name) {
@@ -20,15 +20,7 @@ public class Arme {
     public String getNom() {
         return nom;
     }
-    //Getter type
-    public String getType() {
-        return type;
-    }
-    
-    //Setter type
-    public void setType(String type) {
-        this.type = type;
-    }
+  
     
     
     

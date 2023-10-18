@@ -13,7 +13,6 @@ public class Guerrier extends Personnage{
         this.health = Health;
         this.name = Name;
         this.ridingHorse = RidingHorse;
-        this.setType("Guerrier");
     } // Fin Constructeur
 
     

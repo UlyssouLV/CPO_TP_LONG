@@ -13,7 +13,6 @@ public class Magicien extends Personnage{
         this.health =Health;
         this.name=Name;
         this.confirmed=Confirmed;
-        this.setType("Magicien");
     }//Fin constructeur
 
     

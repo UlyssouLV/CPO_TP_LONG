@@ -2,11 +2,13 @@
 package Personnages;
 
 import Armes.Arme;
+import Armes.Baton;
+import Armes.Epee;
 import java.util.ArrayList;
 
 public class Personnage {
     ArrayList<Arme> inventaireArmes= new ArrayList<Arme>();
-    private String name,type;
+    private String name;
     private int health;
     private Arme Arme_en_Main;
 
@@ -26,11 +28,6 @@ public class Personnage {
     public Arme getArme_en_Main(){
         return Arme_en_Main;
     }// Fin Getters
-
-    //Setter
-    public void setType(String type) {
-        this.type = type;
-    }
    
     //Methode d'ajout d'Armes à l'inventaire
     public void addWeaponToInv(Arme arme){
@@ -58,21 +55,14 @@ public class Personnage {
         System.out.println(msg);
     }//Fin de méthode d'équipement d'arme de l'inventaire
     
+    
     //Methode pour connaitre le nombre d'armes de prédilection
     public int numberOfWeaponOfChoice(){
         int nb=0;
         //Test de Classe
-        if("Guerrier".equals(type)){
-            for(int i=0;i<inventaireArmes.size();i++){
-                if("Epee".equals(inventaireArmes.get(i).getType())){
-                    nb++;
-                }
-            }
-        } else if("Magicien".equals(type)){
-            for(int i=0;i<inventaireArmes.size();i++){
-                if("Baton".equals(inventaireArmes.get(i).getType())){
-                    nb++;
-                }
+        for(int i=0;i<inventaireArmes.size();i++){
+            if((this instanceof Magicien && inventaireArmes.get(i)instanceof Baton)|| (this instanceof Guerrier && inventaireArmes.get(i) instanceof Epee)){
+                nb++;
             }
         }
         return nb;
