@@ -2,21 +2,20 @@
 package Armes;
 
 public class Baton extends Arme{
-    
-    private int age,lvl;
-    private String name;
+    int Age;
     //Constructeur
-    public Baton(int age, int Lvl, String Name) {
-        super(Lvl, Name);
-        this.age = age;
-        this.lvl = Lvl;
-        this.name = Name;
+    public Baton(int age, int level, String nom) {
+        super(level, nom);
+        this.setAge(age);
     }  // Fin Constructeur
 
+
+
+    
     //toString
     @Override
     public String toString() {
-        return "Baton{" + "age=" + age + ",lvl=" + lvl +",name="+name+'}';
+        return "Baton{" + "age=" + this.getAge() + ",lvl=" + this.getLevel() +",name="+this.getName()+'}';
     }//fin toString
     
     

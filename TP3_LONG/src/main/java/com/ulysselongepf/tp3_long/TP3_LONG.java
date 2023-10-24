@@ -5,13 +5,11 @@ TP 3 : Héritage et polymorhpisme
 
 package com.ulysselongepf.tp3_long;
 
-import Armes.Arme;
 import Armes.Baton;
 import Armes.Epee;
 import Personnages.Guerrier;
 import Personnages.Magicien;
 import Personnages.Personnage;
-import java.util.ArrayList;
 
 public class TP3_LONG {
 
@@ -19,35 +17,51 @@ public class TP3_LONG {
         
        //Creation des Personnages
        Guerrier Ulysse = new Guerrier(100,true,"Ulysse");
-       Magicien Adrien = new Magicien(100,true,"Adrien");
+       Magicien Adrien = new Magicien(100,false,"Adrien");
        
        //Creation des Armes
        Epee Excalibur = new Epee(7,5,"Excalibur");
        Epee Durandal = new Epee(1,1,"Durandal");
-       Epee Legende = new Epee(10,10,"Epee de légende");
        Baton Charme = new Baton(5,6,"Charme");
        Baton Chene = new Baton(4,5,"Chêne");
-       Baton Bois = new Baton(1,1,"Branche");
        
        //Armement Guerrier
-       Ulysse.addWeaponToInv(Legende);
        Ulysse.addWeaponToInv(Excalibur);
-       Ulysse.addWeaponToInv(Bois);
-       Ulysse.equipWeapon("Epee de légende");
+       Ulysse.addWeaponToInv(Chene);
+       Ulysse.equipWeapon("Excalibur");
        
        //Armement Magicien
        Adrien.addWeaponToInv(Chene);
-       Adrien.addWeaponToInv(Charme);
        Adrien.addWeaponToInv(Durandal);
-       Adrien.equipWeapon("Charme");
+       Adrien.equipWeapon("Chêne");
        
-       //Affichage du nombre d'armes de prédilection
-       System.out.println(Ulysse.numberOfWeaponOfChoice());
-       System.out.println(Adrien.numberOfWeaponOfChoice());
+       //Affichage des personnages céés 
+       System.out.println("------Personnages------");
+       System.out.println("Nombre de Personnages : "+Personnage.getNbCarracter());
+       System.out.println("Nombre de Guerriers : "+Guerrier.getNbWarrior());
+       System.out.println("Nombre de Magiciens : "+Magicien.getNbMage());
+       System.out.println("-----------------------");
+          
+       //Affichage Caractéristique des personnages
+       System.out.println(Ulysse);
+       System.out.println(Adrien);
+
+       //Attaques
+       Ulysse.attaquer(Adrien);
+       Adrien.attaquer(Ulysse);
        
        //Affichage Caractéristique des personnages
        System.out.println(Ulysse);
        System.out.println(Adrien);
-        
+       
+       //Personnages vivants
+       if(Ulysse.estVivant()==true) System.out.println("Ulysse est vivant");
+       else System.out.println("Ulysse est mort");
+       if(Adrien.estVivant()==true) System.out.println("Adrien est vivant");
+       else System.out.println("Adrien est mort");
+          
+       
+       
+       
     }
 }
