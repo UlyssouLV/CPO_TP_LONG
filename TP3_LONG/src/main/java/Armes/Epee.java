@@ -4,21 +4,19 @@ package Armes;
 
 public class Epee extends Arme{
     
-   private int finesse,lvl;
    private String name;
 
    
     //Constructeur
-    public Epee(int finesse, int Lvl, String Name) {
+    public Epee(int fein, int Lvl, String Name) {
         super(Lvl, Name);
-        this.finesse = finesse;
-        this.lvl = Lvl;
         this.name=Name;
+        this.setFinesse(fein);
     } // fin Constructeur
 
     @Override
     public String toString() {
-        return "Epee{" + "finesse=" + finesse + ",lvl="+lvl+",name="+name+'}';
+        return "Epee{" + "finesse=" + this.getFinesse() + ",lvl="+this.getLevel()+",name="+name+'}';
     }
     
     

@@ -30,6 +30,10 @@ public class Arme {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void setFinesse(int finesse) {
+        this.finesse = finesse;
+    }
     
     
     

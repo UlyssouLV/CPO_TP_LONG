@@ -118,15 +118,15 @@ public abstract class Personnage implements etreVivant {
             if(this.Arme_en_Main instanceof Baton){//Arme prédilection
                 if((victime instanceof Guerrier && ((Guerrier) victime).getRidingHorse()==true) || (victime instanceof Magicien && ((Magicien) victime).getConfirmed()==true)) {
                     victime.estAttaqué(20*Arme_en_Main.getAge()/2); // Dégats divisés par 2
-                }
-            } else victime.estAttaqué(20*Arme_en_Main.getAge()); // Dégat pas divisés
+                }else victime.estAttaqué(20*Arme_en_Main.getAge()); // Dégat pas divisés
+            } 
         
         } else  if(this instanceof Guerrier){ // Guerrier
             if(this.Arme_en_Main instanceof Epee){//Arme prédilection
                 if((victime instanceof Guerrier && ((Guerrier) victime).getRidingHorse()==true) || (victime instanceof Magicien && ((Magicien) victime).getConfirmed()==true)) {
                     victime.estAttaqué(30*Arme_en_Main.getFinesse()/2); // Dégats divisés par 2
-                }
-            } else victime.estAttaqué(30*Arme_en_Main.getFinesse()); // Dégat pas divisés    
+                }else victime.estAttaqué(30*Arme_en_Main.getFinesse()); // Dégat pas divisés 
+            }    
         }
         this.seFatiguer();
     }
