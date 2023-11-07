@@ -6,8 +6,6 @@ public class LightOff_LONG_version_console {
     public static void main(String[] args) {
         
     Partie partie = new Partie();
-    partie.initialiserPartie();
-    partie.lancerPartie();
 
 
     }

@@ -12,17 +12,17 @@ public class GrilleDeCellules {
     
     /**
     * La matrice carrée correspondant à la grille de CelluleLumineuses. 
-    * @see GrilleDeCellules#matriceCellules
+    * @see matriceCellules
     */ 
     CelluleLumineuse[][] matriceCellules ;
     
      /**
      * Le nombre de lignes de la grille.
-     * @see GrilleDeCellules#nbLignes
+     * @see #nbLignes
      */
      /**
      * Le nombre de colonnes de la grille.
-     * @see GrilleDeCellules#nbColonnes
+     * @see nbColonnes
      */
     int nbLignes, nbColonnes;
     
@@ -40,9 +40,9 @@ public class GrilleDeCellules {
      * @param p_nbColonnes
      *          Le nombre de colonne de la grille
      * 
-     * @see GrilleDeCellules#p_nbLignes
-     * @see GrilleDeCellules#p_nbColonnes
-     * @see GrilleDeCellules#matriceCellules
+     * @see p_nbLignes
+     * @see p_nbColonnes
+     * @see matriceCellules
      */
     public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
         this.nbLignes = p_nbLignes;
@@ -78,9 +78,9 @@ public class GrilleDeCellules {
      * activerLigneColonnesOuDiagonalesAleatoire#dr (Si dr=0 c'est la montante si dr=1 c'est la descendante)
      *
      * @see matriceCellules
-     * @see activerLigneColonnesOuDiagonalesAleatoire#cr
-     * @see activerLigneColonnesOuDiagonalesAleatoire#lr
-     * @see activerLigneColonnesOuDiagonalesAleatoire#loc
+     * @see cr
+     * @see lr
+     * @see loc
      */
     public void activerLigneColonneOuDiagonaleAleatoire(){
         Random r = new Random();

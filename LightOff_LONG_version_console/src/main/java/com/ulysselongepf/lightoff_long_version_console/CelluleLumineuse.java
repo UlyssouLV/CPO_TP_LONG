@@ -21,7 +21,7 @@ public class CelluleLumineuse {
      * ce qui correspond à éteint.
      * </p>
      * 
-     * @see CelluleLumineuse#etat
+     * @see etat
      */
     
     public CelluleLumineuse() {
