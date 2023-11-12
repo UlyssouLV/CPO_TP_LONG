@@ -1,14 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package lightoff_.pkglong.pkg_.graphique;
 
 import java.awt.Color;
 
 /**
- *
+ * Settings est la JFRAME qui représente la première fenêtre du jeu :
+ * Paramétrage de la partie par la difficulté
  * @author Ody
+ * @version finale
  */
 public class Settings extends javax.swing.JFrame {
 
@@ -177,6 +175,10 @@ public class Settings extends javax.swing.JFrame {
 
     }//GEN-LAST:event_PlayActionPerformed
     
+    /**
+     * Cette méthode permet de vérifier que la saisie est valide (entier>0)
+     * @return la taille de la grille custom souhaitée
+     */
     public boolean verifInput(){
         try {
             int size = Integer.parseInt(CustomSize.getText());

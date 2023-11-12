@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package lightoff_.pkglong.pkg_.graphique;
 
 /**
- *
+ * Cette JFrame est la fenêtre qui s'affiche lorsque le jeu est gagné par 
+ * l'utilsiateur. Elle ne propose pas d'actions à part un affichage.
  * @author Ody
+ * @version finale
  */
 public class Gagne extends javax.swing.JFrame {
 

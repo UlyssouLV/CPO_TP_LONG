@@ -8,10 +8,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 /**
- *
+ * Cette JFrame est la fenêtre principale du jeu, à noter que le code 
+ * s'execute directement dans la JFrame on n'a pas distancé le code du jeu 
+ * dans des classes différentes.
  * @author Ody
+ * @version finale
  */
-public class FenetrePrincipale extends javax.swing.JFrame {
+public final class FenetrePrincipale extends javax.swing.JFrame {
     int nbCoups=1;
     GrilleDeCellules grille;
 
@@ -19,6 +22,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
+    /**
+     *Methode qui permet d'initialiser une grille de partie non gagné dés le
+     * premier tour
+     * @see grille
+     *          La grile de jeu
+     */
     public void initialiserPartie() {
     grille.eteindreToutesLesCellules();
     grille.melangerMatriceAleatoirement(10);
@@ -29,7 +38,13 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }
     
     /**
-     * Creates new form FenetrePrincipale
+     * Constructeur de la fenetre
+     * @param size
+     *          La taille de la grille
+     * @see grille
+     *          La grille de jeu
+     * @see PanneauGrille
+     *          Le Layout de la fenetre
      */
     public FenetrePrincipale(int size) {
         initComponents();
@@ -42,6 +57,11 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         this.setVisible(true);  
     }
     
+    /**
+     *Methode qui permet de détecter si la partie est gagnée ou non
+     * Dans le cas favorable on ferme cette fenetre et on affiche la Jframe 
+     * Gagne
+     */
     public void gagne(){
         if(grille.cellulesToutesEteintes()){
             dispose();
@@ -49,6 +69,11 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Methode qui configure l'affiche de la grille dans la fenetre
+     * @param size
+     *          La taille de la grile
+     */
     public void setLayoutGrid(int size){
 
         for (int i=0; i < size; i++) { 
@@ -63,6 +88,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         } 
     }
     
+    /**
+     * Methode qui vient modifier la grille en fonction des boutons de commande
+     * cliqués
+     * @param size
+     *            La taille de la grille
+     */
     public void changeLayoutGrid(int size){
         PanneauGrille.removeAll();
         setLayoutGrid(size);
@@ -71,6 +102,11 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         
     }
     
+    /**
+     * Methode qui configure l'affichage des boutons de commande dans le 
+     * layout
+     * @param size
+     */
     public void setLayoutCommand(int size){
         
 
