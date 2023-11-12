@@ -16,7 +16,6 @@ public class Gagne extends javax.swing.JFrame {
      */
     public Gagne(int nbCoups) {
         initComponents();
-        System.out.println(nbCoups);
         Nb.setText("Nombre de coups necessaires : "+String.valueOf(nbCoups));
         this.setVisible(true);
     }
@@ -55,7 +54,7 @@ public class Gagne extends javax.swing.JFrame {
                 NbPropertyChange(evt);
             }
         });
-        getContentPane().add(Nb, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 310, 20));
+        getContentPane().add(Nb, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 280, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
